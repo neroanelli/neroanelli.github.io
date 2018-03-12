@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/wangye.css" />
+
+
+<title>店铺列表 - 膳魔师THERMOS</title>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-common.js"></script>
+<script language="javascript" src="js/pcasunzip.js" charset="gb2312"></script>
+<script type="text/javascript">
+function getValue(){ 
+var getpro=document.getElementById("province").value;
+var getcity=document.getElementById("city").value;
+var getarea=document.getElementById("area").value;
+alert(getpro+" "+getcity+" "+getarea);
+ }
+</script>
+   <style type="text/css">
+
+  </style>
+</head>
+
+<body>
+<div id="header">
+	<div id="header_cont">
+    	<div class="inner">
+        	<div id="logo"><a href="./"><img src="images/logo.png"></a></div>
+            <div class="bg"></div>
+            <ul id="nav">
+                <li ><a href="index.html">首页</a></li>
+                <li id="cp"><a href="about1_cp.html">产品</a></li>
+                <li class="curr"><a href="about2_dp.html">店铺</a></li>
+                <li ><a href="about3_fw.html">服务</a></li>
+                <li ><a href="about4_pp.html">品牌</a></li>
+                <li id="hov"><a href="about5_spu.html">食谱</a></li>
+            </ul>
+            <div class="user logout" >
+            	<a href="about11_dl.html" target="blank">登录/注册</a>
+            </div>
+            
+            <div id="search">
+            	<form action="?product-product-search.html" method="post">
+                <input type="text" class="search" name="search"  placeholder="搜索产品" />
+                <input type="submit" class="searchbtn" value="&nbsp;" />
+                </form>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+<div id="topnavbar1" style="display: none;">
+
+          <div id="topnanv1" style="width: 50%;">
+
+
+         <div id="anvlfteb1">
+
+         <div selec1="bbs1" class="posbox1"> <a href="#">系列</a> <i></i></div>
+    
+         <div selec1="news1" class="posbox1"><a href="#">类别</a> <i></i></div>
+    
+         <div selec1="post1" class="posbox1"><a href="#">季节</a> <i></i></div>
+    
+         <div selec1="youhui1" class="posbox1"><a href="#">所有</a> <i></i></div>
+     
+
+         <div id="seledbox1" class="posiabox1" style="display: none; left: 1px;"><div>
+
+      </div></div>
+
+    </div>
+
+    </div>
+
+ </div>
+
+<div id="topnavbar" style="display: none;">
+
+          <div id="topnanv" style="width: 50%;">
+
+
+         <div id="anvlfteb">
+
+         <div selec="bbs" class="posbox"> <a href="#">使用产品</a> <i></i></div>
+    
+         <div selec="news" class="posbox"><a href="#">料理菜式</a> <i></i></div>
+    
+         <div selec="post" class="posbox"><a href="#">料理主题</a> <i></i></div>
+    
+         <div selec="youhui" class="posbox"><a href="#">所有</a> <i></i></div>
+     
+
+         <div id="seledbox" class="posiabox" style="display: none; left: 1px;"><div>
+
+      </div></div>
+
+    </div>
+
+    </div>
+
+ </div>
+
+<!-- <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div> -->
+
+<div id="login">
+	<div class="loginform">
+    	<a class="close" onClick="closelogin()"><img src="images/close.jpg"></a>
+    	<div class="inputs">
+        	<input type="text" class="oneline" id="mobile" onblur="checkNum()"  placeholder="输入手机号">
+        	<input type="password" class="oneline" id="pwd" onblur="checkpwd()" id="pw" placeholder="输入密码">
+        	<input type="submit" class="oneline red" onClick="checkLogin()" value="登录">
+        </div>
+        <div class="links">
+        	<a href="?user-reg-getcode.html">忘记密码</a>
+            <a href="?user-reg-register.html" class="right">立即注册&gt;&gt;</a>
+        </div>
+    </div>
+    </div>
+
+
+
+    
+
+	<div id="shop">
+	<div class="inner">
+        <p class="shoptitle">查找您身边的门店</p>
+        <div class="search">
+        <form action="" method="">
+            
+                <fieldset style="padding:5px;border: 0px;">
+                <select id="shoptype">
+                <option value="0">门店类别</option>
+                <option value="47">百货专柜</option>
+                <option value="48">专卖店</option>
+                <option value="79">工厂店</option>
+                <option value="78">母婴店</option>
+                <option value="121">经销商</option>
+            </select>
+                   <select name="user.province" id="province"></select>
+                   <select name="user.city" id="city"></select>
+                   <select name="user.area" id="area"></select>
+                   <input type="text" id="searchcont" class="searchipt" placeholder="门店名称搜索">
+                   <input type="button" name="" value="搜索" style="width: 40px;height: 40px;background: red;border:0px;color: #fff;cursor: pointer;">
+               </fieldset>
+            </form>
+            <script language="javascript" defer>
+             new PCAS("user.province","user.city","user.area","山东省","济南市","济南市");
+
+            </script>
+            
+        </div>
+            <div class="onlineshops">
+         <!--    <select id="barea" onChange="getSarea()">
+                <option value="0">省</option>
+                <option value="2">北京</option>
+                <option value="3">安徽</option>
+                <option value="4">福建</option>
+                <option value="5">甘肃</option>
+                <option value="6">广东</option>
+                <option value="7">广西</option>
+                <option value="8">贵州</option>
+                <option value="9">海南</option>
+                <option value="10">河北</option>
+                <option value="11">河南</option>
+                <option value="12">黑龙江</option>
+                <option value="13">湖北</option>
+                <option value="14">湖南</option>
+                <option value="15">吉林</option>
+                <option value="16">江苏</option>
+                <option value="17">江西</option>
+                <option value="18">辽宁</option>
+                <option value="19">内蒙古</option>
+                <option value="20">宁夏</option>
+                <option value="21">青海</option>
+                <option value="22">山东</option>
+                <option value="23">山西</option>
+                <option value="24">陕西</option>
+                <option value="25">上海</option>
+                <option value="26">四川</option>
+                <option value="27">天津</option>
+                <option value="28">西藏</option>
+                <option value="29">新疆</option>
+                <option value="30">云南</option>
+                <option value="31">浙江</option>
+                <option value="32">重庆</option>
+            </select>
+            <select id="sarea">
+                <option value="0">市</option>
+            </select> -->
+            
+    			<div class="title">天猫：</div>
+	            <div class="links">
+	            	<a href="https://thermos.tmall.com/?spm=a1z10.1-b-s.1997427721.d4918089.euutYd" target="_blank">膳魔师官方旗舰店</a> 
+	            	<a href="https://thermosmy.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.aaKoJX&user_number_id=2473721369&rn=d4866aaa83a2417ab" target="_blank">膳魔师母婴旗舰店</a> 
+	            	<a href="https://thermosxs.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.IHFyid&user_number_id=811691369&rn=d390b07578bf2b04f4" target="_blank">膳魔师新实专卖店</a> 
+	            	<a href="https://thermosmtmt.tmall.com/search.htm?spm=a220m.1000858.1000725.59.BvszJY&user_number_id=1899629431&rn=c20d503aa8e7b7502174e8" target="_blank">膳魔师美滔美淘专卖店</a> 
+	            	<a href="https://thermosxl.tmall.com/search.htm?spm=a220m.1000858.1000725.9.BvszJY&user_number_id=1717233565&rn=c20d503aa8e7b7502174e83aa" target="_blank">膳魔师熙浪专卖店</a> 
+	            	<a href="https://thermoshanying.tmall.com" target="_blank">膳魔师涵盈专卖店</a> 
+	            	<a href="http://thermosdeyun.tmall.com/" target="_blank">膳魔师德运专卖店</a> 
+	            	<a href="http://yuemeijujj.tmall.com" target="_blank">越美居家居专营店</a> 
+	            </div>
+                <div class="clear"></div>
+    	</div>
+        <div class="onlineshops">
+        	<div class="title">京东：</div>
+                <div class="links">
+                	<a href="http://t.cn/RMgSOwk" target="_blank">膳魔师官方旗舰店</a> 
+                	<a href="http://t.cn/RtEQAtw" target="_blank">膳魔师京东自营旗舰店</a> 
+                	<a href="https://mall.jd.com/index-95207.html" target="_blank">膳魔师晶津专卖店</a> 
+                	<a href="http://mall.jd.com/index-170783.html" target="_blank">膳魔师佳美专卖店</a> 
+                	<a href="https://zhide.jd.com/" target="_blank">膳魔师智德专卖店</a> 
+                	<a href="https://thermoschina.jd.com/" target="_blank">膳魔师迎贝专卖店</a> 
+                	<a href="https://mall.jd.com/index-114512.html" target="_blank">膳魔师佰恒达专卖店</a> 
+                	<a href="https://mall.jd.com/index-624518.html" target="_blank">膳魔师琦瑜专卖店</a> 
+                	<a href="http://t.cn/RtEQ0vZ" target="_blank">膳魔师家用电器旗舰店</a> 
+                </div>
+                <div class="clear"></div>
+ 	   	</div>
+    	<div class="onlineshops">
+        	<div class="title">亚马逊：</div>
+                <div class="links">
+                	<a href="https://www.amazon.cn/b/ref=amb_link_16?ie=UTF8&node=1849573071" target="_blank">膳魔师母婴亚马逊官方旗舰店</a> 
+                </div>
+                <div class="clear"></div>
+    	</div>
+                               
+	</div>
+</div>
+
+<div id="links">
+  <!-- <div class="close on" onclick="menuopen()"><img src="images/icon_plus.png"></div> -->
+    <ul class="more">
+      <li class="phone"><div class="info"><p>欢迎拨打客服电话<br />010-00000000</p></div></li>
+        <li class="wechat"><div class="info"><p>关注膳魔师微信<br />咨询1对1客服</p><img src="images/service_05_20160914151852.jpg"></div></li>
+        <li class="mail"><div class="info"><p>service@thermos.com.cn<br />欢迎发送你的建议</p></div></li>
+    </ul>
+</div>
+	
+	<center>
+    <div id="footer">
+          <table>
+           <tr id="lst">
+               <td>产品分类</td>
+               <td><a href="">店铺查询</a></td>
+               <td><a href="about4_pp.html">品牌故事</a></td>
+               <td><a href="#">资讯速递</a></td>
+               <td><img src="images/服务.png" width="112" height="40" /></td>
+           </tr>
+           <tr>
+               <td><a href="about1_cp.html#bgtq">办公通勤</a></td>
+               <td><a href="about2_dp.html">百货专柜</a></td>
+               <td><a href="about4_pp.html#jp1">魔法师</a></td>
+               <td><a href="about14_sp.html">全部视频</a></td>
+               <td>欢迎拨打客服电话</td>
+           </tr>
+           <tr>
+               <td><a href="about1_cp.html#jujia">居家</a></td>
+               <td><a href="about2_dp.html">专卖店</a></td>
+               <td><a href="about4_pp.html#jp2">艺术家</a></td>
+               <td><a href="about13_zixun.html">全部文章</a></td>
+               <td>010-00000000</td>
+           </tr>
+           <tr>
+               <td><a href="about1_cp.html#yd">运动户外</a></td>
+               <td><a href="about2_dp.html">工厂店</a></td>
+               <td><a href="about4_pp.html#jp3">冒险家</a></td>
+               <td></td>
+               <td rowspan="5"><img src="images/service_05_20160914151852.jpg" /></td>
+           </tr>
+           <tr>
+               <td><a href="about1_cp.html#qinzi">亲子</a></td>
+               <td><a href="about2_dp.html">母婴店</a></td>
+               <td></td>
+               <td></td>
+           </tr>
+           <tr>
+               <td><a href="about1_cp.html#zn">智能厨房</a></td>
+               <td><a href="about2_dp.html">官方授权网上商城</a></td>
+               <td></td>
+               <td></td>
+           </tr>
+           <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+         </table>
+    </div>
+    <div id="bottom">
+         <a href="#">法律声明</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">使用条款</a><br />
+         <p>Copyright © 2016 Thermos. All Rights Reserved. 膳魔师（中国）家庭制品有限公司 版权所有  苏ICP备11080120号</p>
+    </div></center>
+    </center>
+</div>
+</body>
+</html>
