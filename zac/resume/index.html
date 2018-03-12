@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta name="renderer" content="webkit">
+	   <link rel="stylesheet" type="text/css" href="css/style.css">
+	   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+	   <link href="css/default.css" rel="stylesheet" type="text/css" />
+
+		
+
+		<script src="js/jquery.js" type="text/javascript"></script>
+
+		<script src="js/raphael.js" type="text/javascript"></script>
+
+		<script src="js/init.js" type="text/javascript"></script>
+
+		<!-- <link rel="stylesheet" type="text/css" href="css/history.css">
+
+        <script type="text/javascript" src="js/jquery (2).js"></script>
+        
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        
+        <script type="text/javascript" src="js/jquery.easing.js"></script>
+        
+        <script type="text/javascript" src="js/history.js"></script> -->
+	<title>web前端个人简历</title>
+	<!--[if lte IE 8]>
+	<style type="text/css">
+		html,body{width:100%; height:100%; overflow:scroll}
+		.section-btn{display:none;}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<section class="section-wrap">
+		<div class="section section-1">
+			<!-- <div class="title active">
+				<p>CSS3 纵向滚屏翻页，支持键盘，鼠标滚轮操作</p>
+			</div> -->
+		<canvas id="c"></canvas>
+		<div class="tit" style="color: #fff;"><i>Hello , I am Zac!</i><br><span>我叫李哲<br>一名前端开发工程师</span><br>8347399@qq.com</div>
+		<script>
+			var c=document.getElementById("c");
+			var	ctx=c.getContext("2d");
+				c.width=window.innerWidth;
+				c.height=window.innerHeight;
+			// var c=document.getCSSCanvasContext("2d", "identifier", window.innerWidth, window.innerHeight);
+//				ctx.fillRect(0,0,100,100);
+//				a,b,c,d分别代表x方向偏移,y方向偏移,宽，高
+			var string1 = "abcdefghijklmnopqrstuvwxyz";
+				string1.split("");
+			var fontsize=20;
+				columns=c.width/fontsize;
+			var drop = [];
+			for(var x=0;x<columns;x++)
+			{
+				drop[x]=0;
+			}
+		function drap(){
+			ctx.fillStyle="rgba(0,0,0,0.07)";
+			ctx.fillRect(0,0,c.width,c.height);
+			ctx.fillStyle="#0F0";
+			ctx.font=fontsize+"px arial";
+			for(var i=0;i<drop.length;i++){
+				var text1=string1[Math.floor(Math.random()*string1.length)];
+				ctx.fillText(text1,i*fontsize,drop[i]*fontsize);
+				drop[i]++;
+				if(drop[i]*fontsize>c.height&&Math.random()>0.9){//90%的几率掉落
+					drop[i]=0;
+				}
+			}
+		}
+		setInterval(drap,20);
+		</script>
+		</div>
+		<div class="section section-2">
+			<div class="title">
+				<div class="tit" style="/*position: absolute; top: 50%;left: 30%;*/margin:0 auto;padding-top:10%;color: #fff;font-size: 0.5em;max-width: 700px;height: 300px;"><img src="images/lz.jpg" style="width: 200px;height: 200px;border-radius: 100px;" > <br><br>您好，我叫李哲，27岁，籍贯四川达州。 我并不是计算机专业,但对前端很感兴趣，接受过系统正规的培训，今后的职业规划是朝着全栈发展，目前在学Thinkphp、AnjularJs。本人在公司主要负责整个网站的前端开发，配合后台人员实现产品前端界面效果与功能。写过响应式页面，移动端页面，pc端页面。另外，商城，企业网站，视频，音频，评论，地图等都有涉及。 在此很感谢中科创达软件股份有限公司对我的培养，受益匪浅。<br>
+                有较强的团队协作能力，有责任心，执行力、学习能力强！</div>
+			</div>
+		</div>
+		<div class="section section-3">
+			<div class="title">
+				<div style="text-align:center;clear:both">
+
+<!-- <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+
+<script src="/follow.js" type="text/javascript"></script> -->
+
+</div>
+
+		<div id="content" class="tit">
+
+			<div class="legend">
+
+				<h1>Skills:</h1>
+
+				<div class="skills">
+
+					<ul>
+
+						<li class="jq">JavaScript</li>
+
+						<li class="css">CSS3</li>
+
+						<li class="html">HTML5</li>
+
+						<li class="php">PHP</li>
+
+						<li class="sql">MySQL</li>
+
+					</ul>
+
+				</div>	
+
+			</div>
+
+			<div id="diagram"></div>
+
+		</div>
+
+
+
+		<div class="footer">
+
+			<div class="inside">
+
+
+
+			</div>
+
+		</div>
+
+
+
+		<div class="get">
+
+			<div class="arc">
+
+				<span class="text">JavaScript</span>
+
+				<input type="hidden" class="percent" value="95" />
+
+				<input type="hidden" class="color" value="#97BE0D" />
+
+			</div>
+
+			<div class="arc">
+
+				<span class="text">CSS3</span>
+
+				<input type="hidden" class="percent" value="90" />
+
+				<input type="hidden" class="color" value="#D84F5F" />
+
+			</div>
+
+			<div class="arc">
+
+				<span class="text">HTML5</span>
+
+				<input type="hidden" class="percent" value="80" />
+
+				<input type="hidden" class="color" value="#88B8E6" />
+
+			</div>
+
+			<div class="arc">
+
+				<span class="text">PHP</span>
+
+				<input type="hidden" class="percent" value="53" />
+
+				<input type="hidden" class="color" value="#BEDBE9" />
+
+			</div>
+
+			<div class="arc">
+
+				<span class="text">MySQL</span>
+
+				<input type="hidden" class="percent" value="45" />
+
+				<input type="hidden" class="color" value="#EDEBEE" />
+
+			</div>
+
+		</div>
+			</div>
+		</div>
+		<div class="section section-4">
+			<div class="title">
+			<div id="tit"><!-- <div style="width: 100px;height: 100px;background:rgba(0,255,0,.5);border-radius: 50px;margin:-19% auto;position: center">经历</div> -->
+			<!-- <table>
+                    <tr>
+                         <td rowspan="2">2014 <span class="month">06</span></td>
+                         <td class="bd2"></td>
+                         <td class="bd1"></td>
+                         <td rowspan="2" class="txt">毕业于西南科技大学</td>
+                    </tr>
+                    <tr>
+                         
+                         <td class="bd"></td>
+                         <td></td>
+                         
+                    </tr>
+                    <tr>
+                         <td rowspan="2">2014 <span class="month">04</span> ~ 2017 <span class="month">05</span></td>
+                         <td class="bd2"></td>
+                         <td class="bd1"></td>
+                         <td rowspan="2" class="txt">就职于中铁八局集团第四工程有限公司</td>
+                    </tr>
+                    <tr>
+                         
+                         <td class="bd"></td>
+                         <td></td>
+                         
+                    </tr>
+                    <tr>
+                         <td rowspan="2" style="width: 400px;">2017 <span class="month">07</span> ~ 2017 <span class="month">11</span></td>
+                         <td class="bd2"></td>
+                         <td class="bd1"></td>
+                         <td rowspan="2" class="txt">中科创达软件股份有限公司</td>
+                    </tr>
+                    <tr>
+                         
+                         <td class="bd"></td>
+                         <td></td>
+                         
+                    </tr>
+			</table>	
+        </div> -->
+        <h2>我的经历</h2>
+        <ul>
+        	<li class="first-words">2014年6月，毕业于西南科技大学</li>
+        	<li class="second-words">2014年6月至2016年7月，就职于中铁八局集团第四工程有限公司</li>
+        	<li class="third-words">2016年7月，系统培训、自学web前端</li>
+        	<li class="first-words">2016年12月至2018年1月，就职于中科创达有限公司，做前端开发</li>
+        </ul>
+</div>
+</div>
+<!-- <script src="http://www.jq22.com/js/jq.js"></script> -->
+
+
+			<!-- </div> -->
+		</div>
+		<div class="section section-5">
+			<div class="title">
+				<p class="tit" style="padding-top: 200px;">作品集</p>
+			</div>
+		</div>
+	</section>
+	<ul class="section-btn">
+	  <li class="on"></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	</ul>
+	<div class="arrow">&laquo;</div>
+
+
+<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//此处引用：鼠标滚轮mousewheel插件
+	!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+	
+	$(function(){
+		var i=0;
+		var $btn = $('.section-btn li'),
+			$wrap = $('.section-wrap'),
+			$arrow = $('.arrow');
+		
+		/*当前页面赋值*/
+		function up(){i++;if(i==$btn.length){i=0};}
+		function down(){i--;if(i<0){i=$btn.length-1};}
+		
+		/*页面滑动*/
+		function run(){
+			$btn.eq(i).addClass('on').siblings().removeClass('on');	
+			$wrap.attr("class","section-wrap").addClass(function() { return "put-section-"+i; }).find('.section').eq(i).find('.title').addClass('active');
+		};
+		
+		/*右侧按钮点击*/
+		$btn.each(function(index) {
+			$(this).click(function(){
+				i=index;
+				run();
+			})
+		});
+		
+		/*翻页按钮点击*/
+		$arrow.one('click',go);
+		function go(){
+			up();run();	
+			setTimeout(function(){$arrow.one('click',go)},1000)
+		};
+		
+		/*响应鼠标*/
+		$wrap.one('mousewheel',mouse_);
+		function mouse_(event){
+			if(event.deltaY<0) {up()}
+			else{down()}
+			run();
+			setTimeout(function(){$wrap.one('mousewheel',mouse_)},1000)
+		};
+		
+		/*响应键盘上下键*/
+		$(document).one('keydown',k);
+		function k(event){
+			var e=event||window.event;
+			var key=e.keyCode||e.which||e.charCode;
+			switch(key)	{
+				case 38: down();run();	
+				break;
+				case 40: up();run();	
+				break;
+			};
+			setTimeout(function(){$(document).one('keydown',k)},1000);
+		}
+	});
+</script>
+</body>
+</html>
