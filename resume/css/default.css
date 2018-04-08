@@ -65,7 +65,7 @@ margin-bottom:1px;
 font-size:18px;
 }
 
-.skills .jq {
+.skills .js {
 background:#97BE0D;
 }
 
@@ -77,13 +77,18 @@ background:#D84F5F;
 background:#88B8E6;
 }
 
-.skills .php {
+.skills .ps {
 background:#BEDBE9;
 }
 
-.skills .sql {
+.skills .bs {
 background:#EDEBEE;
 }
+
+.skills .jq {
+	background:#6ebe2d;
+}
+
 
 .footer {
 position:fixed;
