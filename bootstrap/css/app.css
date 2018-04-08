@@ -1,0 +1,314 @@
+/*h1,h3,p,button,a{
+	font-family: 
+}*/
+.side-nav{
+	position: fixed;
+	top: 45%;
+	right: 20px;
+	z-index: 1;
+}
+.side-nav ul.nav-side-nav{
+	text-align:center;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.side-nav ul.nav-side-nav >li{
+	display: block;
+	line-height: 1.45em;
+	margin: 0;
+	padding: 8px 0;
+}
+
+.side-nav ul.nav-side-nav >li >a{
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #e2e2e2;
+
+}
+
+.onepage{
+	height: 750px; 
+}
+
+.onepage-bg{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-position: center center;
+	background-size: cover;
+}
+
+#onepagebg{
+    background-image: url("../images/recipes_02_20161107162111.jpg");
+} 
+
+.headh1content{
+	margin-top: 220px;
+	line-height: 75px;
+}
+
+.title-text{
+	margin-left: 50px;
+}
+
+.headfontsize h1{
+	font-size: 50pt;
+	color: #ffffff;
+}
+
+.headfontsize p{
+	font-size: 24px;
+	margin-top: 40px;
+	color: #ffffff;
+} 
+
+.btn-app-store .btn{
+	font-size: 30px;
+}
+
+.twopage{
+	margin-top: 240px;
+	padding: 2px 0 0 2px;
+	height: auto;
+	/*background-image: url("/images/");*/
+	position: relative;
+}
+
+.twopage-text{
+	width: 100%;
+	text-align: center;
+}
+
+.twopage-text-h1{
+	margin-left: 120px;
+	letter-spacing: 2px;
+	/*margin-top: 240px;*/
+	margin-bottom: 0px;
+	padding: 20px 0 0 0;
+}
+
+.twopage-text-h1 img{
+	width: 120px;
+}
+
+.twopage .row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.twopage-courses{
+	float: left;
+	background:#ffffff;
+	padding: 0 2px 2px 0;
+	position: relative;
+	overflow: hidden; 
+}
+
+.twopage-courses > a{
+	width: 100%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+.classicon h3{
+	margin-top: 240px;
+	color: #d1e973;
+}
+
+.classicon h1{
+	margin-top: 40px;
+	color: #fff5e1;
+}
+
+.classicon{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #fff;
+	opacity: 0;
+}
+
+.classicon:hover{
+    background: #1eb450;
+    opacity:0.9;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+
+.twopagebtn{
+	width: 100%;
+	margin: 0% auto;
+	text-align: center;
+}
+
+.twopagebtn .btn-lg{
+	font-size: 25px;
+}
+
+#twopage-easy{
+	margin: 50px 0 110px 0; 
+}
+
+.threepage{
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+}
+
+.threepage-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: center center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#threepage-bg{
+	background-image: url("../images/page3.jpg");
+}
+
+.threepagecontent{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.threepagetext{
+	margin-top: 100px;
+}
+
+.threepage-text h1{
+	margin-top: 100px;
+}
+
+.threepage-text p{
+	margin-top: 40px;
+	color: #000;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+.threepagebtncontent{
+	margin-top: 600px;
+	font-size: 25px;
+}
+
+.fourpage{
+	height: 1000px;
+	/*background-image: url("");*/
+	background-color: #5ccb78;
+	margin-top: 1000px; 
+}
+
+.coursexingqing-text{
+	color: #ffffff;
+	margin-top: 100px;
+	width: 100%;
+	text-align:center;
+}
+
+.coursexingqing-text h1{
+	font-size: 40px;
+}
+
+.coursexingqing-text p{
+	margin-top: 35px;
+	font-size: 20px;
+}
+
+/*#carousel-exanple-generic .carousel-indicators{
+	margin-top: 500px;
+}*/
+
+.fourpage .container .carousel{
+	margin-top: 100px;
+}
+
+.carousel-control.left{
+	background-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+	background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+	background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+	background-repeat: repeat-x;
+}
+
+.carousel-control.right{
+	background-image: -webkit-linear-gradient(right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+	background-image: -webkit-gradient(linear,right top,left top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0)));
+	background-image: linear-gradient(to left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+	background-repeat: repeat-x;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    left: -20%;
+    /*margin-left: -10px;*/
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    right: -20%;
+    /*margin-right: -10px;*/
+}
+
+.fivepage-bg{
+	height: 1000px;
+	width: 100%;
+	position: absolute;
+	background-position: center center;
+	background-size: cover;
+}
+
+#fivepage{
+	background-image: url("../images/fivepage1.jpg");
+}
+
+.footertext{
+	margin-top: 155px;
+	width: 100%;
+	color: #ffffff;
+	font-size: 40px;
+	text-align: center;
+}
+
+.footertext h1{
+	font-size: 40px;
+}
+
+.footerbtncenter{
+	margin-top: 180px;
+	text-align:center;
+}
+
+.queyeicon{
+	width: 200px;
+}
+
+.queyeicon:hover{
+	border:2px solid #d9edf7;
+}
+
+.footertextbtn{
+	margin-top: 150px;
+	width: 100%;
+	text-align: center;
+}
+
+.footertextbtn p{
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+.footertext-text{
+	margin-top: 20px;
+	color: #000000;
+}
