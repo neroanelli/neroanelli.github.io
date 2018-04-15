@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+        *{
+        	margin: 0;
+        	padding: 0;
+        }
+		
+        #box1{
+         	width: 100px;
+         	height: 100px;
+         	background-color: red;
+         	position: absolute;
+         	left: 0;
+         }
+
+         #box2{
+         	width: 1px;
+         	height: 800px;
+         	background-color: black;
+         	position: absolute;
+         	left: 1200px;
+         	top: 0;
+         }
+
+         #box3
+          width: 100px;
+          height: 100px;
+          background-color: yellowgreen;
+          position: absolute;
+          left: 0;
+          top: 400px;
+         }
+
+	</style>
+
+	<script type="text/javascript">
+		
+        window.onload = function(){
+
+          var btn01 = document.getElementById('btn01');
+
+          var btn02 = document.getElementById('btn02');
+
+          var btn03 = document.getElementById('btn03');
+
+          var box1 = document.getElementById('box1');
+
+          var box3 = document.getElementById('box3');
+
+          // var timer;
+
+          btn01.onclick = function(){
+
+            move(box1,"left",10,1200);
+            
+          }
+
+           btn02.onclick = function(){
+
+            move(box1,"left",10,0);
+            
+          }
+
+          btn03.onclick = function(){
+
+            move(box3,"left",20,1200,function(){
+
+                move(box3,"width",20,400,function(){
+
+                      move(box3,"height",20,400,function(){
+
+                           move(box3,"width",20,100,function(){
+
+                                move(box3,"height",20,100)
+
+                          });
+
+                      });
+
+                });
+
+            });
+            
+          }
+
+        }
+        
+        function move(obj,attr,speed,target,callback){
+
+           clearInterval(obj.timer);
+
+           var current = parseInt(getStyle(obj,attr));
+
+               if(current > target){
+                            
+                   speed = -speed;
+
+                }
+
+            obj.timer = setInterval(function(){
+ 
+            var oldValue = parseInt(getStyle(obj,attr));
+
+            
+            var newValue = oldValue + speed;
+
+            if(speed > 0 &&　newValue > target || speed < 0 && newValue < target){
+
+                 newValue = target;
+
+            }
+ 
+
+            obj.style[attr] = newValue + "px";
+
+            if(newValue == target){
+                
+                clearInterval(obj.timer);
+
+                callback && callback();
+
+            }
+
+            },30)
+
+        }
+
+        function getStyle(obj, name) {
+
+          	if(window.getComputedStyle) {
+          		//正常浏览器的方式，具有getComputedStyle()方法
+          		return getComputedStyle(obj, null)[name];
+          	} else {
+          		//IE8的方式，没有getComputedStyle()方法
+          		return obj.currentStyle[name];
+          	}
+          
+          }
+	</script>
+</head>
+<body>
+	  <button id="btn01">点我向右</button>
+	  <button id="btn02">点我向左</button>
+    <button id="btn03">box3向右</button>
+	  <br><br>
+      <div id="box1"></div>
+      <div id="box2"></div>
+      <div id="box3"></div>
+</body>
+</html>

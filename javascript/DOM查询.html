@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button {
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+#btnList {
+	float:left;
+}
+
+#total{
+	width: 450px;
+	float:left;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.inner li{
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	margin: 5px;
+	background-color: #99ff99;
+	float:left;
+}
+
+.inner{
+	width:400px;
+	border-style: solid;
+	border-width: 1px;
+	margin-bottom: 10px;
+	padding: 10px;
+	float: left;
+}
+
+	</style>
+
+	<script type="text/javascript">
+		
+		function myClick(Str,fun){
+           var btn = document.getElementById(Str);
+           btn.onclick = fun;
+		}
+		window.onload = function(){
+	    myClick("btn01",function(){
+	    	var bj = document.getElementById("bj");
+	    	alert(bj.innerHTML);
+	    });
+		myClick("btn02",function(){
+			var lis = document.getElementsByTagName('li');
+			for(var i = 0;i < lis.length ;i++){
+			alert(lis[i].innerHTML);
+			}
+		});
+		myClick("btn03",function(){
+	    	var gd = document.getElementsByName("gender");
+	    	for(var j = 0;j <　gd.length;j++){
+	    	alert(gd[j].value);
+	    	}
+	    });
+        myClick("btn04",function(){
+	    	var city = document.getElementById("city");
+	    	var liss = city.getElementsByTagName("li");
+	    	for(var i = 0;i < liss.length;i++){
+	    	alert(liss[i].innerHTML);}
+	    });
+	    myClick("btn05",function(){
+	    	var city = document.getElementById("city").childNodes;
+	    	for(var i = 0;i < city.length;i++){
+	    	alert(city[i]);
+	    	}
+	    });
+
+	    myClick("btn06",function(){
+	    	var phone = document.getElementById("phone").firstChild;
+	    	alert(phone.innerHTML);
+	    });
+        myClick("btn07",function(){
+	    	var parent = document.getElementById("bj").parentNode;
+	    	alert(parent);
+	    });
+	    myClick("btn09",function(){
+	    	var un = document.getElementById("username").value;
+	    	alert(un);
+	    });
+	    myClick("btn10",function(){
+	    	var uns = document.getElementById("username");
+	        uns.value = "一只哈巴狗";
+	    });
+	    myClick("btn11",function(){
+	    	var bj = document.getElementById("bj");
+	        alert(bj.innerHTML);
+	    });
+
+
+
+		}
+
+	</script>
+</head>
+<body>
+     <div id="total">
+			<div class="inner">
+				<p>
+					你喜欢哪个城市?
+				</p>
+
+				<ul id="city">
+					<li id="bj">北京</li>
+					<li>上海</li>
+					<li>东京</li>
+					<li>首尔</li>
+				</ul>
+
+				<br>
+				<br>
+
+				<p>
+					你喜欢哪款单机游戏?
+				</p>
+
+				<ul id="game">
+					<li id="rl">红警</li>
+					<li>实况</li>
+					<li>极品飞车</li>
+					<li>魔兽</li>
+				</ul>
+
+				<br />
+				<br />
+
+				<p>
+					你手机的操作系统是?
+				</p>
+
+				<ul id="phone"><li>IOS</li> <li id="android">Android</li><li>Windows Phone</li></ul>
+			</div>
+
+			<div class="inner">
+				gender:
+				<input class="hello" type="radio" name="gender" value="male"/>
+				Male
+				<input class="hello" type="radio" name="gender" value="female"/>
+				Female
+				<br>
+				<br>
+				name:
+				<input type="text" name="name" id="username" value="abcde"/>
+			</div>
+		</div>
+		<div id="btnList">
+			<div><button id="btn01">查找#bj节点</button></div>
+			<div><button id="btn02">查找所有li节点</button></div>
+			<div><button id="btn03">查找name=gender的所有节点</button></div>
+			<div><button id="btn04">查找#city下所有li节点</button></div>
+			<div><button id="btn05">返回#city的所有子节点</button></div>
+			<div><button id="btn06">返回#phone的第一个子节点</button></div>
+			<div><button id="btn07">返回#bj的父节点</button></div>
+			<div><button id="btn08">返回#android的前一个兄弟节点</button></div>
+			<div><button id="btn09">返回#username的value属性值</button></div>
+			<div><button id="btn10">设置#username的value属性值</button></div>
+			<div><button id="btn11">返回#bj的文本值</button></div>
+		</div>
+</body>
+</html>

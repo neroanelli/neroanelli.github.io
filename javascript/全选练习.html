@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function myClick(a,fun){
+            var btn = document.getElementById(a);
+            btn.onclick = fun;
+		}
+
+            window.onload = function(){
+            	myClick("allCheck",function(){
+            	// var ac = document.getElementById("allCheck");
+            	// alert("12300");
+            	var ipt = document.getElementsByName("sport");
+            	for(var i = 0;i < ipt.length; i++ ){
+                ipt[i].checked = true;
+                }
+            	});
+            	myClick("noCheck",function(){
+            	// var ac = document.getElementById("allCheck");
+            	// alert("12300");
+            	var ipt = document.getElementsByName("sport");
+            	for(var i = 0;i < ipt.length; i++ ){
+                ipt[i].checked = false;
+                }
+            	});
+            	myClick("reCheck",function(){
+            	// var ac = document.getElementById("allCheck");
+            	// alert("12300");
+            	var ipt = document.getElementsByName("sport");
+            	for(var i = 0;i < ipt.length; i++ ){
+            	if(ipt[i].checked == true){
+                    ipt[i].checked = false;
+            	}else{
+            		ipt[i].checked = true;
+            	}
+                }
+            	});
+
+            	myClick("sub",function(){
+            	// var ac = document.getElementById("allCheck");
+            	// alert("12300");
+            	var ipt = document.getElementsByName("sport");
+            	for(var i = 0;i < ipt.length; i++ ){
+                if(ipt[i].checked == true){
+                    alert(ipt[i].value)
+            	}
+                }
+            	});
+            }
+
+	</script>
+</head>
+<body>
+      <p>你喜欢的运动是？</p>
+      <input type="checkbox" name="sport" value="篮球">篮球
+      <input type="checkbox" name="sport" value="游泳">游泳
+      <input type="checkbox" name="sport" value="乒乓球">乒乓球
+      <input type="checkbox" name="sport" value="足球">足球<br><br>
+      <button id="allCheck">全选</button>
+      <button id="noCheck">全不选</button>
+      <button id="reCheck">反选</button>
+      <button id="sub">提交</button>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+  //        var sum = 0;
+  //       for(var i = 0;i < 100 ; i++){
+  //       if (i % 2 == 1) {
+  //        sum = sum + i;
+		// }
+		// }
+  //       document.write(sum);
+
+    // var sum = 0; 
+    // var count = 0;
+    // for(var i = 1 ; i <= 100 ; i++){
+    // 	if (i % 7 == 0) {
+    // 		// document.write(i + "<br>");
+    // 		sum += i;
+    // 		count++;
+    // 	}
+    // }
+    // document.write("0-100里7的倍数的总和为："+sum +"<br>"+ "0-100里7的倍数的个数为："+count);
+
+
+    //水仙花数     一个三位数   百位数字的立方加上十位数字的立方加上个位数字的立方的和   等于这个三位数   例  153   1*1*1+5*5*5+3*3*3 = 153
+
+    // for(var i = 100 ; i < 1000 ; i++){
+    // 	var bai = parseInt(i/100);
+    // 	var shi = parseInt((i - bai*100)/10);
+    // 	var ge = parseInt(i%10);
+    // 	if(bai*bai*bai+shi*shi*shi+ge*ge*ge == i){
+    // 		document.write(i + "<br>");
+    // 	}
+    // }
+
+
+    //质数   只能被数字本身和1整除的数    1既不是质数  也不是合数
+
+    // var num = prompt("请输入质数：");
+    // if(num <= 1){
+    // 	document.write("这不是质数！");
+    // }else{
+    // 	var flag = true;
+    //     for(var i = 2;i < num;i++){
+    //     	if (num % i == 0) {
+    //             flag = false;
+    //     	}
+    //     }
+    //     if(flag){
+    //     	alert("这是质数！")
+    //     }else{
+    //     	alert("这不是质数！ ")
+    //     }
+    // }
+
+
+    //for循环内嵌
+
+    // for(var i = 1 ; i < 10 ; i++){
+    // 	for(var j = 1 ; j <= i ; j++){
+
+    // 		var m = i * j;
+    // 		document.write(j + "*" + i + "=" + m + "&nbsp;");
+    // 	}
+    // 	document.write("<br>");
+    // }
+
+    //打印0-100之间的所有的质数
+
+ //    for(var i = 2 ; i < 100 ; i++){
+ //    	var flag = true;
+ //    	for(var j = 2  ; j < i ; j ++){
+ //    	if(i % j == 0){
+ //            flag = false;
+ //    	}
+ //     }
+ //     if(flag){
+ //     	document.write(i+"<br>")
+ //     }
+ // }
+
+
+        function abc(){
+
+            var div = document.createElement("div");
+            div.innerHTML = "桃黑";
+            div.style.backgroundColor = "red";
+            div.style.width = "100px";
+            div.style.height = "100px";
+            document.body.appendChild(div);
+        }
+    
+	</script>
+</head>
+<body>
+      <input type="button" name=""  value="点我新建div" onclick="abc()">
+</body>
+</html>

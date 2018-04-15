@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+         #outer{
+         	width: 600px;
+         	margin: 50px auto;
+         	text-align: center;
+         	background-color: greenyellow;
+         	padding: 20px;
+         }
+	</style>
+	<script type="text/javascript">
+		
+       window.onload = function(){
+       	var btn = document.getElementById("btn");
+       	var btn1 = document.getElementById("btn1");
+       	var img = document.getElementsByTagName("img")[0];
+        var arr = ["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg"];
+        var index = 0;
+        var info = document.getElementById("info");
+        info.innerHTML =  "一共有"+arr.length+"张图片"+",这是第"+(index+1)+"张";
+       	btn.onclick = function(){
+       		index--;
+       		if (index < 0) {
+       			index = arr.length-1;
+       		}
+       		img.src = arr[index];
+       		info.innerHTML =  "一共有"+arr.length+"张图片"+",这是第"+(index+1)+"张";
+       	}
+        btn1.onclick = function(){
+        	index++;
+        	if(index > arr.length-1){
+        		index = 0;
+        	}
+            img.src = arr[index];
+            info.innerHTML =  "一共有"+arr.length+"张图片"+",这是第"+(index+1)+"张";
+       	}
+       }
+
+	</script>
+</head>
+<body>
+	<div id="outer">
+	  <p id="info"></p>
+	  <img src="images/1.jpg" alt="iving">
+      <button id="btn">上一张</button>
+      <button id="btn1">下一张</button>
+      </div>
+</body>
+</html>

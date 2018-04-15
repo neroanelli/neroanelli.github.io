@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style type="text/css">
+    	#box{
+    		width: 100px;
+    		height: 100px;
+    		background-color: #bfa;
+    		position: absolute;
+    	}
+    	#box1{
+    		width: 100px;
+    		height: 100px;
+    		background-color: pink;
+    		position: absolute;
+    		left: 200px;
+    	}
+    	#box2{
+    		width: 100px;
+    		height: 100px;
+    		background-color: orange;
+    		position: absolute;
+    		left: 400px;
+    	}
+    </style>
+    <script type="text/javascript">
+    	
+         // window.onload = function(){
+         // 	var box = document.getElementById('box');
+         // 	box.onmousedown = function(event){
+         //      event = event||window.event;
+         //    var ol = event.clientX - box.offsetLeft;
+         //    var ot = event.clientY - box.offsetTop;
+              
+         //    document.onmousemove = function(event){
+         //    box.style.left = event.clientX - ol + "px";
+         //    box.style.top = event.clientY - ot + "px";
+         //    };
+         // 	};
+         // 	document.onmouseup = function(){
+         // 		document.onmousemove = null;
+         // 	}
+
+         // }
+
+         window.onload = function(){
+         	var box = document.getElementById('box');
+         	var box1 = document.getElementById('box1');
+            var box2 = document.getElementById('box2');
+
+            drag(box);
+            drag(box1);
+            drag(box2);
+         }
+         
+         function drag(obj){
+           
+            obj.onmousedown = function(event){
+ 
+                 var ol = event.clientX - obj.offsetLeft;
+                 var ot = event.clientY - obj.offsetTop;
+
+                 document.onmousemove = function(event){
+
+                  obj.style.left = event.clientX - ol +"px";
+                  obj.style.top = event.clientY - ot +"px";
+
+                 }
+            document.onmouseup = function(){
+
+                 document.onmousemove = null;
+                 document.onmouseup = null;
+                 //当鼠标松开时，取消对事件的捕获
+                 obj.releaseCapture && obj.releaseCapture();
+
+            }
+
+            }
+
+         }
+    </script>
+</head>
+<body>
+      <div id="box"></div>
+      <div id="box1"></div>
+      <div id="box2"></div>
+</body>
+</html>

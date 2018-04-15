@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		// function Person(name,age){
+		// 	this.name = name;
+		// 	this.age = age;
+		// }
+
+		// Person.prototype.toString = function(){
+		// 	return "Person[name=" + this.name +	",age=" + this.age +"]";
+		// };
+  //       var per = new Person("孙悟空",18);
+  //       var per2 = new Person("猪八戒",28);
+  //       var per3 = new Person("沙和尚",22);
+  //       var per4 = new Person("红孩儿",8);
+  //       var per5 = new Person("蜘蛛精",16);
+
+  //       var perArr = [per,per2,per3,per4,per5];
+
+  //       function getAdult(arr){
+
+  //       	var newArr = []; 
+  //       	for(var i = 0 ; i < arr.length ; i++){
+  //       		var p = arr[i];
+  //       		// document.write(p);
+  //       		if(p.age > 17){
+  //       			newArr.push(p);
+
+  //       		}
+  //       	}
+  //       	return newArr;
+  //       }
+  //           var result = getAdult(perArr);
+		//     document.write(result);
+
+
+
+		//数组去重
+
+		// var  arr = [1,2,3,2,1,2,2,2,2,2,2,3,4,2,5];
+  //       for(var i = 0 ; i < arr.length ; i++){
+  //       	for(var j = i + 1 ; j <　arr.length ; j ++){
+  //       		if(arr[i] == arr[j]){
+  //       			arr.splice(j,1);
+  //       			j--;
+  //       		}
+  //       	}
+  //       }
+  //       			document.write(arr);
+
+
+          function fun(){
+          	console.log(this.name);
+          }
+
+          var obj  = {name:"obj1"};
+
+          fun.apply(obj);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
