@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		
+            $(function(){
+
+            	$("p").click(function(){
+
+            		// alert($(this).text());
+            		alert(this.innerHTML);
+            	});
+
+            	$("table:eq(0) tr:even").css("background","#ffbbaa");
+
+            	$("button").click(function(){
+
+            		// alert($("input:checked").length);
+            		alert($(":checkbox:checked").length);
+            	})
+            })
+
+	</script>
+
+</head>
+<body>
+	    <p>段落1</p>
+		<p>段落2</p>
+		<p>段落3</p>
+		
+		<table>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+		</table>
+		<br>
+		<hr>
+		<br>
+		<table>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+			<tr>
+				<td>第一行</td><td>第一行</td>
+			</tr>
+		</table>
+		
+		<input type="checkbox" name="test" />
+		<input type="checkbox" name="test" />
+		<input type="checkbox" name="test" />
+		<input type="checkbox" name="test" />
+		<input type="checkbox" name="test" />
+		<input type="checkbox" name="test" />
+		<button>您选中的个数</button>
+
+</body>
+</html>

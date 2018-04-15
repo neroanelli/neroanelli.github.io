@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*body{
+			padding: 100px 100px;
+		}
+		img{
+			margin:0 20px;
+		}*/
+   		body{
+         	margin:0;
+         	padding:40px;
+         	background:#fff;
+         	font:80% Arial, Helvetica, sans-serif;
+         	color:#555;
+         	line-height:180%;
+         }
+        img{border:none;}
+        ul,li{
+      	    margin:0;
+      	    padding:0;
+            }
+        li{
+            list-style:none;
+            float:left;
+            display:inline;
+            margin-right:10px;
+            border:1px solid #AAAAAA;
+            }
+   
+   /* tooltip */
+        #tooltip{
+   	        position:absolute;
+   	        border:1px solid #ccc;
+   	        background:#333;
+   	        padding:2px;
+   	        display:none;
+   	        color:#fff;
+   	    }
+	</style>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		// $(function(){
+		// 	$("#nav img").hover(function(event){
+  //              // $(this).css("opacity","0.5");
+  //              for(var i = 1; i <= $("img").length; i++){
+  //               var index = $(this).index()+1;
+  //              	// $(this).attr("src","images/"+index+".jpg");
+  //               // $("img").has("src","images/"+index+".jpg").show();
+  //               // alert("dfa");
+  //               var intX = window.event.clientX;
+  //               var intY = window.event.clientY;
+  //               // $("#bigPic").show();
+  //               $("#pre_view").attr("src","images/"+index+".jpg");
+  //               $("#bigPic").css({"top": intY + "px","left": intX  + "px"}).show();
+
+  //              }
+
+		// 	},function(){
+		// 		// $(this).css("opacity","1");
+		// 		// for(var i = 1; i <= $("img").length; i++){
+  //   //             var index = $(this).index()+1;
+		// 		// $(this).attr("src","images/"+index+"_small.jpg");
+		// 		// $("img").has("src","images/"+index+".jpg").hide();
+  //               $("#bigPic").hide();
+  //              // }
+		// 	})
+		// })
+
+       $(function(){
+
+       	$("a.tooltip").mouseover(function(event){
+             var bigDiv = "<div id='tooltip'><img src='" + this.href + "'/></div>";
+             $("body").append(bigDiv);
+             $("#tooltip").css({"top":(event.pageY + 10) + "px","left":(event.pageX+10) + "px"}).show();
+       	}).mouseout(function(){
+       		$("#tooltip").remove()
+       	}).mousemove(function(event){
+            $("#tooltip").css({"top":(event.pageY + 10) + "px","left":(event.pageX+10) + "px"});
+       	})
+       })
+	</script>
+</head>
+<body>
+	<!-- div id="nav">
+      <img src="images/1_small.jpg">
+      <img src="images/2_small.jpg">
+      <img src="images/3_small.jpg">
+      <img src="images/4_small.jpg">
+      <img src="images/5_small.jpg">
+    </div>
+      <div style="position: absolute;display: none" id="bigPic">
+      	<img src="" style="width: 600px;" id="pre_view">
+      </div> -->
+      <h3>有效果：</h3>
+	<ul>
+		<li><a href="images/1.jpg" class="tooltip" title="苹果 iPod"><img src="images/1_small.jpg" alt="苹果 iPod" /></a></li>
+		<li><a href="images/2.jpg" class="tooltip" title="苹果 iPod nano"><img src="images/2_small.jpg" alt="苹果 iPod nano"/></a></li>
+		<li><a href="images/3.jpg" class="tooltip" title="苹果 iPhone"><img src="images/3_small.jpg" alt="苹果 iPhone"/></a></li>
+		<li><a href="images/4.jpg" class="tooltip" title="苹果 Mac"><img src="images/4_small.jpg" alt="苹果 Mac"/></a></li>
+		<li><a href="images/5.jpg" class="tooltip" title="苹果 Mac"><img src="images/5_small.jpg" alt="苹果 Mac"/></a></li>
+	</ul>
+
+
+<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+<h3>无效果：</h3>
+<ul>
+		<li><a href="images/1.jpg" title="苹果 iPod"><img src="images/1_small.jpg" alt="苹果 iPod" /></a></li>
+		<li><a href="images/2.jpg" title="苹果 iPod nano"><img src="images/2_small.jpg" alt="苹果 iPod nano"/></a></li>
+		<li><a href="images/3.jpg" title="苹果 iPhone"><img src="images/3_small.jpg" alt="苹果 iPhone"/></a></li>
+		<li><a href="images/4.jpg" title="苹果 Mac"><img src="images/4_small.jpg" alt="苹果 Mac"/></a></li>
+		<li><a href="images/5.jpg" title="苹果 Mac"><img src="images/5_small.jpg" alt="苹果 Mac"/></a></li>
+	</ul>
+</body>
+</html>
